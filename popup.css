@@ -1,75 +1,351 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+
+:root{
+
+    --bg:#0d1117;
+    --surface:#161b22;
+    --card:#1f2937;
+    --border:#30363d;
+    --primary:#3b82f6;
+    --primary-hover:#2563eb;
+    --text:#f8fafc;
+    --text-light:#94a3b8;
+    --radius:18px;
+    --shadow:0 20px 50px rgba(0,0,0,.45);
+
+}
+
 *{
-margin:0;
-padding:0;
-box-sizing:border-box;
+
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+
 }
 
 body{
 
-width:380px;
+    width:420px;
+    min-height:700px;
 
-background:#111827;
+    background:var(--bg);
 
-color:white;
+    color:var(--text);
 
-font-family:Arial,sans-serif;
+    font-family:'Inter',sans-serif;
 
-padding:20px;
-
-}
-
-.container{
-
-display:flex;
-
-flex-direction:column;
-
-gap:15px;
+    overflow-x:hidden;
 
 }
 
-h1{
+.app{
 
-font-size:25px;
-
-}
-
-input{
-
-padding:12px;
-
-border:none;
-
-border-radius:8px;
-
-outline:none;
-
-font-size:15px;
+    padding:18px;
 
 }
 
-button{
+.topbar{
 
-padding:12px;
+    display:flex;
 
-border:none;
+    justify-content:space-between;
 
-border-radius:8px;
+    align-items:center;
 
-background:#2563eb;
-
-color:white;
-
-cursor:pointer;
-
-margin-top:8px;
-
-transition:.3s;
+    margin-bottom:20px;
 
 }
 
-button:hover{
+.logo{
 
-background:#1d4ed8;
+    display:flex;
+
+    gap:14px;
+
+    align-items:center;
+
+}
+
+.logo-icon{
+
+    width:52px;
+
+    height:52px;
+
+    border-radius:15px;
+
+    background:linear-gradient(135deg,#2563eb,#06b6d4);
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    font-size:24px;
+
+    box-shadow:var(--shadow);
+
+}
+
+.logo h1{
+
+    font-size:22px;
+
+    font-weight:700;
+
+}
+
+.logo span{
+
+    color:var(--text-light);
+
+    font-size:13px;
+
+}
+
+.top-actions{
+
+    display:flex;
+
+    gap:10px;
+
+}
+
+.icon-btn{
+
+    width:42px;
+
+    height:42px;
+
+    border:none;
+
+    border-radius:12px;
+
+    cursor:pointer;
+
+    background:var(--surface);
+
+    color:white;
+
+    transition:.25s;
+
+}
+
+.icon-btn:hover{
+
+    background:var(--primary);
+
+}
+
+.search-section{
+
+    margin-bottom:24px;
+
+}
+
+.search-section input{
+
+    width:100%;
+
+    padding:14px 18px;
+
+    border:none;
+
+    outline:none;
+
+    border-radius:15px;
+
+    background:var(--surface);
+
+    color:white;
+
+    font-size:15px;
+
+}
+
+.search-section input::placeholder{
+
+    color:#7c8798;
+
+}
+
+.section{
+
+    margin-bottom:22px;
+
+}
+
+.section-title{
+
+    font-size:16px;
+
+    font-weight:600;
+
+    margin-bottom:12px;
+
+}
+
+.card-grid{
+
+    display:grid;
+
+    grid-template-columns:repeat(2,1fr);
+
+    gap:12px;
+
+}
+
+.card{
+
+    background:var(--card);
+
+    border:1px solid var(--border);
+
+    border-radius:16px;
+
+    padding:16px;
+
+    cursor:pointer;
+
+    transition:.25s;
+
+}
+
+.card:hover{
+
+    transform:translateY(-4px);
+
+    background:#293548;
+
+    border-color:var(--primary);
+
+}
+
+.card h3{
+
+    font-size:15px;
+
+    margin-bottom:6px;
+
+}
+
+.card p{
+
+    font-size:12px;
+
+    color:var(--text-light);
+
+}
+
+.small-card{
+
+    background:var(--surface);
+
+    border-radius:16px;
+
+    padding:16px;
+
+    border:1px solid var(--border);
+
+}
+
+.small-card textarea{
+
+    width:100%;
+
+    min-height:90px;
+
+    resize:none;
+
+    border:none;
+
+    outline:none;
+
+    background:transparent;
+
+    color:white;
+
+    font-size:14px;
+
+    font-family:inherit;
+
+}
+
+.small-card input{
+
+    width:100%;
+
+    padding:12px;
+
+    border:none;
+
+    border-radius:10px;
+
+    outline:none;
+
+    margin-bottom:12px;
+
+    background:#0f172a;
+
+    color:white;
+
+}
+
+.small-card button{
+
+    width:100%;
+
+    padding:12px;
+
+    border:none;
+
+    border-radius:10px;
+
+    background:var(--primary);
+
+    color:white;
+
+    cursor:pointer;
+
+    transition:.25s;
+
+}
+
+.small-card button:hover{
+
+    background:var(--primary-hover);
+
+}
+
+#todoList{
+
+    list-style:none;
+
+    margin-top:15px;
+
+}
+
+#todoList li{
+
+    background:#0f172a;
+
+    padding:10px;
+
+    border-radius:10px;
+
+    margin-bottom:8px;
+
+}
+
+footer{
+
+    margin-top:25px;
+
+    text-align:center;
+
+    color:var(--text-light);
+
+    font-size:12px;
 
 }
