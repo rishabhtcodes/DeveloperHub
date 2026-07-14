@@ -1,0 +1,37 @@
+{
+  "manifest_version": 3,
+  "name": "DeveloperHub",
+  "short_name": "DeveloperHub",
+  "version": "0.1.0",
+  "description": "An all-in-one productivity hub for developers with AI launchers, bookmarks, notes, planner, and quick tools.",
+
+  "action": {
+    "default_title": "DeveloperHub",
+    "default_popup": "popup.html"
+  },
+
+  "background": {
+    "service_worker": "background.js"
+  },
+
+  "permissions": [
+    "storage",
+    "tabs",
+    "bookmarks",
+    "notifications",
+    "activeTab"
+  ],
+
+  "host_permissions": [
+    "<all_urls>"
+  ],
+
+  "commands": {
+    "open-dashboard": {
+      "suggested_key": {
+        "default": "Ctrl+Shift+Space"
+      },
+      "description": "Open DeveloperHub"
+    }
+  }
+}
