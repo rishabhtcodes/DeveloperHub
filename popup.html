@@ -2,29 +2,180 @@
 <html lang="en">
 
 <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DeveloperHub</title>
 
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-<title>DeveloperHub</title>
-
-<link rel="stylesheet" href="popup.css">
-
+    <link rel="stylesheet" href="popup.css">
 </head>
 
 <body>
 
-<div class="container">
+<div class="app">
 
-<h1>🚀 DeveloperHub</h1>
+    <header class="topbar">
 
-<input
-id="search"
-type="text"
-placeholder="Search websites..."
->
+        <div class="logo">
 
-<div id="websites"></div>
+            <div class="logo-icon">🚀</div>
+
+            <div>
+
+                <h1>DeveloperHub</h1>
+
+                <span>Your Productivity Workspace</span>
+
+            </div>
+
+        </div>
+
+        <div class="top-actions">
+
+            <button id="themeBtn" class="icon-btn">🌙</button>
+
+            <button id="settingsBtn" class="icon-btn">⚙️</button>
+
+        </div>
+
+    </header>
+
+    <section class="search-section">
+
+        <input
+            type="text"
+            id="searchInput"
+            placeholder="Search websites, AI tools..."
+        >
+
+    </section>
+
+    <section class="section">
+
+        <div class="section-title">
+
+            ⭐ Favorites
+
+        </div>
+
+        <div class="card-grid" id="favoriteGrid">
+
+        </div>
+
+    </section>
+
+    <section class="section">
+
+        <div class="section-title">
+
+            🤖 AI Tools
+
+        </div>
+
+        <div class="card-grid" id="aiGrid">
+
+        </div>
+
+    </section>
+
+    <section class="section">
+
+        <div class="section-title">
+
+            💻 Development
+
+        </div>
+
+        <div class="card-grid" id="devGrid">
+
+        </div>
+
+    </section>
+
+    <section class="section">
+
+        <div class="section-title">
+
+            📒 Notes
+
+        </div>
+
+        <div class="small-card">
+
+            <textarea
+                id="quickNote"
+                placeholder="Write something..."
+            ></textarea>
+
+        </div>
+
+    </section>
+
+    <section class="section">
+
+        <div class="section-title">
+
+            ☑ Todo
+
+        </div>
+
+        <div class="small-card">
+
+            <input
+                id="todoInput"
+                placeholder="Add a task..."
+            >
+
+            <button id="addTodo">
+
+                Add
+
+            </button>
+
+            <ul id="todoList"></ul>
+
+        </div>
+
+    </section>
+
+    <section class="section">
+
+        <div class="section-title">
+
+            📅 Planner
+
+        </div>
+
+        <div class="small-card">
+
+            <input
+                type="date"
+                id="plannerDate"
+            >
+
+            <textarea
+                id="plannerTask"
+                placeholder="Today's plan..."
+            ></textarea>
+
+            <button id="savePlanner">
+
+                Save
+
+            </button>
+
+        </div>
+
+    </section>
+
+    <footer>
+
+        <small>
+
+            DeveloperHub v0.2.0
+
+        </small>
+
+    </footer>
 
 </div>
 
